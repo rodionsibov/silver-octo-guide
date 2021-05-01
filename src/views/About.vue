@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="flex justify-center flex-col items-center">
     <div
       v-if="user"
-      class="w-3/12 m-auto bg-purple-100 mt-4 pb-10 shadow-2xl flex justify-center flex-col items-center rounded-lg border-2 border-purple-300"
+      class="md:w-4/12 w-11/12 mx-10 mt-4 pb-10 shadow-2xl rounded-lg bg-white"
     >
       <div class="flex justify-center m-4">
         <img :src="user.avatar" alt="Avatar" />
@@ -11,7 +11,7 @@
         {{ user.first_name }}
         {{ user.last_name }}
       </h3>
-      <h5 class="text-gray-700">
+      <h5 class="text-gray-700 text-center">
         {{ user.email }}
       </h5>
     </div>

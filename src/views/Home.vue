@@ -1,15 +1,18 @@
 <template>
-  <div class="w-full flex justify-center">
+  <div class="w-full flex flex-col justify-center items-center">
     <input
       v-model="text"
-      class="p-2 border-purple-900 border-2 rounded"
+      class="p-2 border-purple-500 border-2 rounded md:w-1/2 w-11/12 block"
       type="text"
       placeholder="Enter User here"
     />
+    <small class="text-gray-500 mt-1">
+      {{ names }}
+    </small>
   </div>
-  <div class="mt-10 p-4 flex flex-wrap justify-center">
+  <div class="mt-10 p-4 flex flex-col items-center">
     <div
-      class="ml-4 text-2xl text-purple-900"
+      class="my-2 text-2xl text-purple-900"
       v-for="(user, index) in filteredUser"
       :key="index"
     >
@@ -24,13 +27,13 @@
 import { computed, reactive, toRefs } from "vue";
 
 export default {
-  name: "Home",
   setup() {
     const state = reactive({
       users: [],
       urlIdLookup: {},
       text: "",
       filteredUser: computed(() => updateUser()),
+      names: computed(() => state.users.map((user) => user.first_name)),
     });
 
     function updateUser() {
