@@ -6,13 +6,13 @@
       type="text"
       placeholder="Enter User here"
     />
-    <small class="text-gray-500 mt-1">
+    <small class="text-purple-200 mt-1">
       {{ names }}
     </small>
   </div>
   <div class="mt-10 p-4 flex flex-col items-center">
     <div
-      class="my-2 text-2xl text-purple-900"
+      class="my-2 text-2xl text-purple-100"
       v-for="(user, index) in filteredUser"
       :key="index"
     >

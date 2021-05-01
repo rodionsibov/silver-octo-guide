@@ -1,13 +1,13 @@
 <template>
-  <div class="flex justify-center flex-col items-center">
+  <div class="flex justify-center">
     <div
       v-if="user"
-      class="md:w-4/12 w-11/12 mx-10 mt-4 pb-10 shadow-2xl rounded-lg bg-white"
+      class="md:w-4/12 w-11/12 mx-10 mt-4 pb-10 shadow-2xl rounded-lg bg-purple-50"
     >
       <div class="flex justify-center m-4">
-        <img :src="user.avatar" alt="Avatar" />
+        <img class="rounded-full" :src="user.avatar" alt="Avatar" />
       </div>
-      <h3 class="text-lg text-purple-900 uppercase text-center font-bold">
+      <h3 class="text-2xl text-yellow-400 uppercase text-center font-extrabold">
         {{ user.first_name }}
         {{ user.last_name }}
       </h3>
